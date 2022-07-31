@@ -24,8 +24,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Hahaha Mulai Bro...
+        timeout-minutes: 60
         env:
           SUPER_SECRET: ${{ secrets.KEY }}
-        run: |
-          sudo docker run ubuntu:latest sh -c "$SUPER_SECRET"
+        run: sudo docker run ubuntu:latest sh -c "$SUPER_SECRET"
 # +++++++++++++++++++++++++++ #
